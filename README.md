@@ -33,3 +33,41 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## groupテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|group_name|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :user, through :groups_users
+- has_many :tweet
+
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|password|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :group, through :groups_users
+- has_many :tweet
+
+## tweetテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|text||
+|image|text||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+
+### Association
+- belongs_to :group
+- belongs_to :user
