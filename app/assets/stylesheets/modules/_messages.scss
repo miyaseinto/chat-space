@@ -57,6 +57,34 @@
     height: 100px;
     background-color: #ffffff;
     border: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    .Group-name{
+      padding: 0 40px;
+      .name{
+        font-size: 20px;
+        padding: 35px 0 15px 0;
+        color: #333333;
+      }
+      .menber{
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    .Edit-btn{
+      border: solid #38aef0;
+      margin: 28px 40px;
+      width: 72px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .Editlink{
+        text-decoration: none;
+        color: #38aef0;
+        padding: 0 40px;
+      }
+    }
   }
   &__center{
     background-color: #fafafa;
