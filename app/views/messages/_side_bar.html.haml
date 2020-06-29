@@ -1,7 +1,10 @@
 .Side-contents
   .Side-content__top
     .Top-text
-     .Top-text__name
-      %ul.Top-text__icon
-        %li.Top-text__icon1
-        %li.Top-text__icon2
+      .Text-name 
+        masa
+      .Text-icon
+        = link_to "#", class: "Text-icon__btn" do
+          = icon('far', 'edit')
+        = link_to "#", class: "Text-icon__btn" do
+          = icon('fas', 'cog')
