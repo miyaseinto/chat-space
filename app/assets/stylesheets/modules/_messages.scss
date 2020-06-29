@@ -7,16 +7,17 @@
   height: 100vh;
 }
 
-.Side-contents{
+.Side-content{
   background-color: #2f3e51;
   width: 300px;
-  .Side-content__top{
+  &__top{
     height: 100px;
     background-color: #253141;
     width: 100vw;
     display: flex;
     align-items: center;
     .Top-text{
+      font-size: 16px;
       color: white;
       height: 20px;
       width: 260px;
@@ -35,20 +36,33 @@
       }
     }
   }
+  &__bottom{
+    color: #ffffff;
+    .Text-bottom{
+      padding: 20px 20px 40px 20px;
+      &__group{
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+      }
+    }
+  }
 }
 
-.Main-contents{
+.Main-content{
   width: calc(100vw - 300px);
-  .Main-content__top{
+  &__top{
     height: 100px;
     background-color: #ffffff;
     border: #eeeeee;
   }
-  .Main-content__center{
+  &__center{
     background-color: #fafafa;
     height: calc(100vh - 190px);
   }
-  .Main-content__bottom{
+  &__bottom{
     display: flex;
     align-items: bottom;
     height: 90px;
