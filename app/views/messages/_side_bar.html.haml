@@ -9,15 +9,10 @@
         = link_to edit_user_path(current_user), class: "Text-icon__btn" do
           = icon('fas', 'cog')
   .Side-content__bottom
-    .Text-bottom
-      %p.Text-bottom__group techcamp
-      %p.Text-bottom__message まだメッセージがありません
-    .Text-bottom
-      %p.Text-bottom__group techcamp
-      %p.Text-bottom__message まだメッセージがありません
-    .Text-bottom
-      %p.Text-bottom__group techcamp
-      %p.Text-bottom__message まだメッセージがありません
-    .Text-bottom
-      %p.Text-bottom__group techcamp
-      %p.Text-bottom__message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Text-bottom
+        = link_to '#' do
+          .Text-bottom__group
+            = group.name
+          .Text-bottom__message
+            メッセージはまだありません
