@@ -4,7 +4,7 @@
       .Text-name 
         = current_user.name
       .Text-icon
-        = link_to "#", class: "Text-icon__btn" do
+        = link_to new_group_path(current_user) , class: "Text-icon__btn" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "Text-icon__btn" do
           = icon('fas', 'cog')
