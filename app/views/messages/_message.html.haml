@@ -1,0 +1,11 @@
+.Comment-name
+  .Name 
+    = message.user.name
+  .Time 
+    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+.Comment-text
+  .Message
+    - if message.content.present?
+      %p.Message__content
+        = message.content
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?

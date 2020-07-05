@@ -1,32 +1,24 @@
 .Main-content
   .Main-content__top
     .Group-name
-      %p.name test
-      %p.menber Menber:name
+      = @group.name
+      .name
+        .menbarlist 
+          Menbar:
+          - @group.users.each do |user|
+            .menbar 
+              = user.name
     .Edit-btn
-      = link_to 'Edit', '#',class: "Editlink"
+      = link_to 'Edit', edit_group_path(@group) ,class: "Editlink"
   .Main-content__center
-    .Comment-name
-      %p.name masa
-      %p.time 2019/11/20(wed)17:43:01
-    .Comment-text
-      %p.message おはよう！
-    .Comment-name
-      %p.name minami
-      %p.time 2019/12/23(mon)18:53:01
-    .Comment-text
-      %p.message こんにちは！
-    .Comment-name
-      %p.name masa
-      %p.time 2019/12/31(fri)23:43:01
-    .Comment-text
-      %p.message こんばんは！
-      
+    = render @messages
+    -# render partial:'message', locals: {message: @messages}
   .Main-content__bottom
-    .Form
-      .Form__input
-        %input.Form__input__text{"placeholder": "type a message", "type": "text"}
-        %label.box-image
-          = icon('fas', 'image')
-          %input.Hidden{type: "file"}
-      %input.Form__submitbtn{"value": "Send", "type": "submit"}
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .Form
+        .Form__input
+          = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+          = f.label :image, class: 'Form__inputImage' do
+            = icon('far', 'image', class: 'Form__icon')
+            = f.file_field :image, class: 'Hidden'
+        = f.submit 'Send', class: 'Form__submit'

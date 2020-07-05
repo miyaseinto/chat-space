@@ -13,7 +13,6 @@
   &__top{
     height: 100px;
     background-color: #253141;
-    width: 100vw;
     display: flex;
     align-items: center;
     .Top-text{
@@ -37,9 +36,13 @@
     }
   }
   &__bottom{
-    color: #ffffff;
+    text-decoration: none;
     .Text-bottom{
       padding: 20px 20px 40px 20px;
+      &__mg{
+        text-decoration: none;
+        color: #ffffff;
+      }
       &__group{
         font-size: 15px;
         padding-bottom: 5px;
@@ -60,15 +63,20 @@
     display: flex;
     justify-content: space-between;
     .Group-name{
-      padding: 0 40px;
+      padding: 30px 0 0 40px;
+      font-size: 20px;
       .name{
-        font-size: 20px;
-        padding: 35px 0 15px 0;
+        padding: 20px 0 15px 0;
         color: #333333;
-      }
-      .menber{
-        font-size: 12px;
-        color: #999999;
+        .menbarlist{
+          font-size: 12px;
+          color: #999999;
+          display: flex;
+          .menbar{
+            list-style: none;
+            padding-left: 5px;
+          }
+        }
       }
     }
     .Edit-btn{
@@ -93,11 +101,11 @@
     .Comment-name{
       display: flex;
       padding-bottom: 12px;
-      .name{
+      .Name{
         color: #333333;
         font-size: 16px;
       }
-      .time{
+      .Time{
         color: #999999;
         font-size: 12px;
         padding-left: 5px;
@@ -125,13 +133,13 @@
         display: flex;
         align-items: center;
         position: relative;
-          &__text{
+          .Form__inputContent{
             padding: 0 40px 0 10px;
             height: 50px;
             width: 100%;
             position: absolute;
           }
-        .box-image{
+         .Form__icon{
           font-size: 25px;
           position: absolute;
           right: 10px;
@@ -140,7 +148,7 @@
           }
         }
       }
-      &__submitbtn{
+      &__submit{
         background-color: #38aef0;
         color: #ffffff;
         font-size: 16px;
