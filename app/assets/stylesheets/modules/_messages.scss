@@ -59,7 +59,7 @@
   &__top{
     height: 100px;
     background-color: #ffffff;
-    border: #eeeeee;
+    border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
     .Group-name{
@@ -80,7 +80,7 @@
       }
     }
     .Edit-btn{
-      border: solid #38aef0;
+      border: 1px solid #38aef0;
       margin: 28px 40px;
       width: 72px;
       text-align: center;
@@ -124,7 +124,7 @@
     background-color: #d2d2d2;
     .Form{
       width: 100%;
-      padding: 0 40px;
+      padding: 0 25px;
       display: flex;
       align-items: center;
       &__input{
@@ -138,15 +138,17 @@
             height: 50px;
             width: 100%;
             position: absolute;
+            border: none;
           }
-         .Form__icon{
-          font-size: 25px;
-          position: absolute;
-          right: 10px;
-          .Hidden{
-            display: none;
+          .fa-image {
+            line-height: 1px;
+            font-size: 25px;
+            right: 10px;
+            position: absolute;
           }
-        }
+      }
+      .Hidden{
+        display: none;
       }
       &__submit{
         background-color: #38aef0;

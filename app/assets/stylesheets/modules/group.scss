@@ -44,6 +44,14 @@ li {
   &__rightField {
     width: 70%;
   }
+  &__users {
+    line-height: 50px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+  }
   &__label {
     display: block;
     line-height: 50px;
