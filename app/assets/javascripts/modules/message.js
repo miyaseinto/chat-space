@@ -58,7 +58,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      let html = buildHTML(data);
+      var html = buildHTML(data);
       $('.Main-content__center').append(html);
       $('.Main-content__center').animate({ scrollTop: $('.Main-content__center')[0].scrollHeight});
       $('form')[0].reset();

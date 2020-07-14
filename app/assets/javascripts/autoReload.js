@@ -44,7 +44,7 @@ $(function(){
       return html;
     };
   }
-
+  
   let reloadMessages = function(){
     let last_message_id = $('.Main-content__center__comment:last').data("message-id") || 0;
     $.ajax({
@@ -55,12 +55,12 @@ $(function(){
     })
     .done(function(messages){
       if (messages.length !== 0){
-        var insertHTML  = '';
-        $.each(messages, function(i,message){
+        let insertHTML  = '';
+        $.each(messages, function(i, message){
           insertHTML += buildHTML(message)
         });
-        $('.Main-content__center'),append(insertHTML);
-        $('.Main-content__center').animate({ scrollTop: $('.Main-content__center')[0].scrollHeight});
+        $('.Main-content__center').append(insertHTML);
+        $('.Main-content__center').animate({scrollTop: $('.Main-content__center')[0].scrollHeight});
       }
     })
     .fail(function(){
