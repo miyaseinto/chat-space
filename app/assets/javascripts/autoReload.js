@@ -55,7 +55,7 @@ $(function(){
     })
     .done(function(messages){
       if (messages.length !== 0){
-        let insertHTML = '';
+        var insertHTML  = '';
         $.each(messages, function(i,message){
           insertHTML += buildHTML(message)
         });
