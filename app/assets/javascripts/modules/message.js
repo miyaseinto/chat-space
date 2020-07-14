@@ -60,7 +60,7 @@ $(function(){
     .done(function(message){
       let html = buildHTML(message);
       $('.Main-content__center').append(html);
-      $('.Main-content__center').animate({ scrollTop: $('.Main-content__center__comment')[0].scrollHeight});
+      $('.Main-content__center').animate({ scrollTop: $('.Main-content__center')[0].scrollHeight});
       $('form')[0].reset();
       $('.Form__submit').prop('disabled', false);
     })
