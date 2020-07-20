@@ -59,7 +59,7 @@ $(function(){
         $.each(messages, function(i, message){
           insertHTML += buildHTML(message)
         });
-        $('.Main-content__center').append(insertHTML);
+        $('.Main-content__center'),append(insertHTML);
         $('.Main-content__center').animate({scrollTop: $('.Main-content__center')[0].scrollHeight});
       }
     })
